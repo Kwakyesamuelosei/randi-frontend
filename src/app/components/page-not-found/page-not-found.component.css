@@ -1,0 +1,13 @@
+.pageContainer {
+    background-color: #0f5486;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 56px;
+    border-radius: 7px;
+    transform: translate(-50%, -50%);
+}
+
+.page-form-button {
+    width: 100%;
+}

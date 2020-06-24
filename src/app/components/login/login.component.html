@@ -1,0 +1,24 @@
+<div class="loginContainer">
+    <h3 class="login-title">Ampersand Invest</h3>
+    <form nz-form  [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input your email!">
+            <nz-input-group nzPrefixIcon="user">
+              <input type="text" nz-input formControlName="email" placeholder="Email" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input your Password!">
+            <nz-input-group nzPrefixIcon="lock">
+              <input type="password" nz-input formControlName="password"  autocomplete="on" placeholder="Password" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        
+        <button [disabled]="loading" nz-button class="login-form-button login-form-margin" [attr.nzType]="'primary'">Log in</button>
+        <div style="text-align: center;padding-top: 10px;" *ngIf="loading">
+            <nz-spin nzSimple></nz-spin>
+        </div>
+      </form>
+</div>

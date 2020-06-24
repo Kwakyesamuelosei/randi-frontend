@@ -1,0 +1,35 @@
+<nz-layout>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+    <div class="logo">Ampersand Invest</div>
+    <ul nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item>
+        <i nz-icon [nzType]="'home'"></i>
+        <a (click)="publishContent('welcome')"><span>Home</span></a>
+      </li>
+      <li nz-menu-item>
+        <i nz-icon nzType="project" nzTheme="outline"></i>
+        <a (click)="publishContent('project')"><span>Projects</span></a>
+      </li>
+      <li nz-menu-item>
+        <i nz-icon nzType="logout" nzTheme="outline"></i>
+        <a (click)="logout()"><span>Logout</span></a>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header style="display: inline-flex;">
+      <!-- <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'" (click)="isCollapsed = !isCollapsed"></i> -->
+      <div class="flex-container">
+        <nz-avatar nzIcon="user" style="background-color:#87d068;"></nz-avatar>
+        <p>{{ userName }}</p>
+      </div>
+    </nz-header>
+    <nz-content>
+      <div class="inner-content">
+        <!-- <router-outlet></router-outlet> -->
+        <app-main-content></app-main-content>
+      </div>
+    </nz-content>
+    <nz-footer>Ampersand ©2020</nz-footer>
+  </nz-layout>
+</nz-layout>

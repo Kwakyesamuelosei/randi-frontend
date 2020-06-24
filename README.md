@@ -2,6 +2,26 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
 
+# Using Docker
+
+Install [Docker](https://docs.docker.com/installation/#installation) and [Compose](https://docs.docker.com/compose/install/#install-compose)
+
+Start docker and run:
+
+```bash
+$ docker-compose up
+
+```
+
+Build and run container:
+
+```bash
+$ docker build -t docker-randi-build .
+$ docker run -p 8000:4200 docker-randi-build
+```
+
+The app will be available at http://localhost:8000
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

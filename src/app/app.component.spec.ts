@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'randi-frantend'`, () => {
+  it(`should have as title 'randi-frontend'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('randi-frantend');
+    expect(app.title).toEqual('randi-frontend');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('randi-frantend app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('randi-frontend app is running!');
   });
 });

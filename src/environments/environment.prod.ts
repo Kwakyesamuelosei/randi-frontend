@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrl: 'https://randi-api-test.herokuapp.com/api/v1'
 };
